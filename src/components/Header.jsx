@@ -60,7 +60,7 @@ function Header(){
 return(
 <Nav>
 <Container>
-<h1></h1>
+<h1>Rennaly</h1>
 <ul>
 <li><a href="#about">Sobre</a></li>
 <li><a href="#projects">Projetos</a></li>
