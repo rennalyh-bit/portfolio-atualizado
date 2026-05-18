@@ -1,0 +1,61 @@
+import { createGlobalStyle } from "styled-components";
+export const GlobalStyles = createGlobalStyle`
+ *{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ scroll-behavior:smooth;
+ }
+ body{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background:#020617;
+ color:white;
+ overflow-x:hidden;
+ }
+ body::before{
+ content:'';
+ position:fixed;
+ width:500px;
+ height:500px;
+ background:#06b6d4;
+ filter:blur(180px);
+ opacity:0.15;
+ top:-200px;
+ left:-200px;
+ z-index:-1;
+ }
+ body::after{
+ content:'';
+ position:fixed;
+ width:500px;
+ height:500px;
+ background:#22d3ee;
+ filter:blur(180px);
+ opacity:0.1;
+ bottom:-200px;
+ right:-200px;
+ z-index:-1;
+ }
+1
+ section{
+ padding:100px 20px;
+ }
+ a{
+ text-decoration:none;
+ color:inherit;
+ }
+ img{
+ max-width:100%;
+ }
+ h2{
+ font-size:3rem;
+ text-align:center;
+ margin-bottom:20px;
+ }
+ .subtitle{
+ text-align:center;
+ color:#94a3b8;
+ margin-bottom:60px;
+ font-size:1.1rem;
+ }
+`;
