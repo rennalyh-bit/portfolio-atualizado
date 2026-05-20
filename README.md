@@ -1,39 +1,26 @@
-# Portfólio Profissional React
+# Portfólio Profissional
 
-Projeto final desenvolvido utilizando React e Styled Components.
-
-## Sobre
-
-Portfólio criado para apresentar projetos, habilidades e experiências desenvolvidas ao longo do curso de desenvolvimento front-end.
+Projeto final desenvolvido com React.
 
 ## Tecnologias
 
 - React
-- JavaScript
 - Styled Components
-- HTML5
-- CSS3
+- JavaScript
+- HTML
+- CSS
 
 ## Funcionalidades
 
+- Página inicial
+- Sobre Mim
+- Projetos
+- Habilidades
+- Contato funcional
 - Navegação entre seções
-- Layout responsivo
-- Exibição de projetos
-- Lista de habilidades
-- Formulário de contato
-- Interface moderna
+- Responsividade
 
-## Projetos apresentados
-
-- Portal de Viagens
-- Blog Next.js
-- Sistema Micro Frontend
-- PWA Otimizado
-- CI/CD com GitHub Actions
-- Todo List React
-- Card Produto Styled Components
-
-## Como executar localmente
+## Como executar
 
 ```bash
 npm install

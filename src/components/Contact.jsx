@@ -1,63 +1,106 @@
 import styled from "styled-components";
+import { useState } from "react";
+
 const Wrapper = styled.section`
- background:#020617;
- text-align:center;
- form{
- max-width:700px;
- margin:auto;
- display:flex;
- flex-direction:column;
- gap:20px;
- }
- input,
- textarea{
- padding:18px;
- border-radius:12px;
- border:1px solid rgba(34,211,238,0.2);
- background:#0f172a;
- color:white;
- outline:none;
- }
- input:focus,
- textarea:focus{
- border-color:#22d3ee;
- }
-12
- button{
- padding:18px;
- border:none;
- border-radius:12px;
- background:#06b6d4;
- color:#020617;
- font-weight:bold;
- cursor:pointer;
- transition:.3s;
- font-size:1rem;
- }
- button:hover{
- transform:translateY(-5px);
- box-shadow:0 0 25px rgba(34,211,238,0.4);
- }
+  text-align: center;
+
+  form {
+    max-width: 700px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  input,
+  textarea {
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #111827;
+
+    color: white;
+  }
+
+  button {
+    padding: 16px;
+
+    background: #22d3ee;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+  }
+
+  .success {
+    margin-top: 20px;
+
+    color: #22d3ee;
+
+    font-weight: bold;
+  }
 `;
-function Contact(){
-return(
-<Wrapper id="contact">
-<h2>Contato</h2>
-<p className="subtitle">
-Vamos conversar sobre projetos e oportunidades.
-</p>
-<form>
-<input type="text" placeholder="Seu nome" />
-<input type="email" placeholder="Seu email" />
-<textarea
-rows="7"
-placeholder="Sua mensagem"
-></textarea>
-<button type="submit">
-Enviar Mensagem
-</button>
-</form>
-</Wrapper>
-)
+
+function Contact() {
+
+  const [message, setMessage] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    setMessage(
+      "Mensagem enviada com sucesso! Obrigado pelo contato."
+    );
+  }
+
+  return (
+    <Wrapper id="contact">
+
+      <h2>Contato</h2>
+
+      <form onSubmit={handleSubmit}>
+
+        <input
+          type="text"
+          placeholder="Seu nome"
+          required
+        />
+
+        <input
+          type="email"
+          placeholder="Seu email"
+          required
+        />
+
+        <textarea
+          rows="7"
+          required
+          placeholder="Sua mensagem"
+        />
+
+        <button type="submit">
+          Enviar
+        </button>
+
+      </form>
+
+      {message && (
+        <p className="success">
+          {message}
+        </p>
+      )}
+
+    </Wrapper>
+  );
 }
+
 export default Contact;
